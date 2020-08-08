@@ -48,11 +48,10 @@ const playRound = (playerSelection, computerSelection) => {
     }
   }
 };
-const playerSelection = "rock";
-// const computerSelection = computerPlay();
+
 const game = () => {
   for (let i = 0; i < 5; i++) {
-    // console.log(computerPlay());
+    let playerSelection = window.prompt();
     console.log(playRound(playerSelection, computerPlay()));
     console.log(` ${playerScore} :${computerScore}`);
   }
