@@ -9,7 +9,8 @@ const computerPlay = () => {
 
 // function to figure who won the round
 const playRound = (playerSelection, computerSelection) => {
-  playerSelection = playerSelection.toUpperCase();
+  // the below line is commented because we will be putting value in the elements
+  // playerSelection = playerSelection.toUpperCase();
 
   //  when playerSelection is Rock
   if (playerSelection === "ROCK") {
@@ -25,7 +26,7 @@ const playRound = (playerSelection, computerSelection) => {
   }
   //  when playerSelction is Paper
   else if (playerSelection === "PAPER") {
-    if (computerSelection === "Rock") {
+    if (computerSelection === "ROCK") {
       playerScore++;
       return "You Win, Paper beats Rock";
     } else if (computerSelection === "SCISSORS") {
@@ -37,10 +38,10 @@ const playRound = (playerSelection, computerSelection) => {
   }
   //   when PlayerSelection is Scissors
   else {
-    if (computerSelection === "Rock") {
+    if (computerSelection === "ROCK") {
       computerScore++;
       return "You Lose! Rock beats Scissors";
-    } else if (computerSelection === "Paper") {
+    } else if (computerSelection === "PAPER") {
       playerScore++;
       return "You Win, Scissors beat Paper";
     } else {
@@ -51,7 +52,9 @@ const playRound = (playerSelection, computerSelection) => {
 
 const game = () => {
   for (let i = 0; i < 5; i++) {
-    let playerSelection = window.prompt();
+    // below line is changed because we will be taking the player selection from his click on the button
+    // let playerSelection = window.prompt();
+
     console.log(playRound(playerSelection, computerPlay()));
     console.log(` ${playerScore} :${computerScore}`);
   }
