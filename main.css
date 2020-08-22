@@ -1,0 +1,55 @@
+h1 {
+  text-align: center;
+}
+.container {
+  background-color: antiquewhite;
+  display: grid;
+  margin: auto;
+  text-align: center;
+  max-width: 27vw;
+  grid-template-areas:
+    "scores"
+    "choices"
+    "choices";
+  min-height: 15vh;
+}
+/* Display Score part */
+.score {
+  grid-area: scores;
+  display: grid;
+  grid-template-areas:
+    "computer player"
+    "computerS playerS";
+}
+#computerScore {
+  height: 10px;
+  background-color: burlywood;
+  grid-area: computerS;
+}
+#playerScore {
+  height: 10px;
+  background-color: burlywood;
+  grid-area: playerS;
+}
+#computerName {
+  grid-area: computer;
+}
+#playerName {
+  grid-area: player;
+}
+/* clickable section (game play) */
+.choice {
+  grid-area: choices;
+  display: grid;
+  grid-template-areas: "rock paper scissors";
+}
+
+#paper {
+  grid-area: paper;
+}
+#rock {
+  grid-area: rock;
+}
+#scissors {
+  grid-area: scissors;
+}
